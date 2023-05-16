@@ -29,16 +29,6 @@ namespace LBA_Services_Delegade_Biblioteca.Controllers
             return delegada();
         }
 
-        
-        [HttpPost("RegistrarLibros")]
-        public async Task<string> RegistrarLibros(ComandoRegistroViewModel comandoRegistroViewModel)
-        {
-            delegadaRegistrarLibros delegada = delegate (ComandoRegistroViewModel _comandoRegistroViewModel)
-            {
-                return _fachada.RegistrarLibros(_comandoRegistroViewModel).Result;
-            };
-            return delegada(comandoRegistroViewModel);
-        }
         [HttpPost("ConteoVehiculos")]
         public async Task<string> ConteoVehiculos(InformacionDto informacionDto)
         {

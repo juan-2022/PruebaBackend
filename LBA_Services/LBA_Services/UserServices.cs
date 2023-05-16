@@ -22,7 +22,7 @@ namespace LBA_Services
                 if (respuesta.IsSuccessStatusCode)
                 {
                     var responseContent = await respuesta.Content.ReadAsStringAsync();
-                    var respuesLogin = JsonSerializer.Deserialize<InformacionDto>(responseContent);
+                   
                     return responseContent;
                 }
                 else
@@ -63,6 +63,7 @@ namespace LBA_Services
             {
                 string fecha = informacionDto.fecha;
                 string token = informacionDto.token;
+
 
                 string url = $"http://23.102.103.53:5200/api/RecaudoVehiculos/{fecha}";
 
