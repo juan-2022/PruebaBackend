@@ -14,34 +14,21 @@ namespace LBA_Negocio.Fachada
             _consultaPrueba = consultaPrueba;
             _comandosPrueba = comandosPrueba;
         }
-        public Task<string> ConsultaAutores()
+        public Task<string> ObtenerToken()
         {
-            return _consultaPrueba.ConsultaAutores();
+            return _consultaPrueba.ObtenerToken();
         }
-        public Task<string> ConsultaEditoriales()
+        public Task<string> ConteoVehiculos(InformacionDto informacionDto)
         {
-            return _consultaPrueba.ConsultaEditoriales();
+            return _comandosPrueba.ConteoVehiculos(informacionDto);
         }
-        public Task<string> ConsultaTodosLosLibros()
+        public Task<string> RecaudoVehiculos(InformacionDto informacionDto)
         {
-            return _consultaPrueba.ConsultaTodosLosLibros();
+            return _comandosPrueba.RecaudoVehiculos(informacionDto);
         }
-        public Task<string> ConsultaLibroPorIsbn(ConsultaIsbnViewModel consultaIsbnViewModel)
+        public Task<string> RegistrarLibros(ComandoRegistroViewModel comandoRegistroViewModel)
         {
-            return _consultaPrueba.ConsultaLibroPorIsbn(consultaIsbnViewModel);
+            return _comandosPrueba.RegistrarLibros(comandoRegistroViewModel);
         }
-        public Task<string> ConsultaTLAutoresDLibroPIsbn(ConsultaIsbnViewModel consultaIsbnViewModel)
-        {
-            return _consultaPrueba.ConsultaTLAutoresDLibroPIsbn(consultaIsbnViewModel);
-        }
-        public Task<string> ConsultaEditorialLibroIsbn(ConsultaIsbnViewModel consultaIsbnViewModel)
-        {
-            return _consultaPrueba.ConsultaEditorialLibroIsbn(consultaIsbnViewModel);
-        }
-        public Task<string> RegistrarLibros(ComandoRegistroViewModel prospectivaViewModel)
-        {
-            return _comandosPrueba.RegistrarLibros(prospectivaViewModel);
-        }
-
     }
 }

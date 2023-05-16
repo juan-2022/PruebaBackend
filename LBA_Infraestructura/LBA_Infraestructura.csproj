@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LBA_Dominios\LBA_Dominios.csproj" />
+    <ProjectReference Include="..\LBA_Services\LBA_Services\LBA_Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
