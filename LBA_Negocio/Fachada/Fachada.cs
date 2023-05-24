@@ -30,5 +30,23 @@ namespace LBA_Negocio.Fachada
         {
             return _comandosPrueba.RegistrarLibros(comandoRegistroViewModel);
         }
+        public Task<string> IniciarSesion(ConsultausuariosDto consultausuariosDto)
+        {
+            return _consultaPrueba.IniciarSesion(consultausuariosDto);
+        }
+
+        public Task<string> CursosAlumno(InformacionCursoDto informacionCursoDto)
+        {
+            return _consultaPrueba.CursosAlumno(informacionCursoDto);
+        }
+        
+        public Task<string> AlumnosxNombre(InformacionEstudiante informacionEstudiante)
+        {
+            return _consultaPrueba.AlumnosxNombre(informacionEstudiante);
+        }
+        public Task<string> Alumnosxid(Estudiantexid estudiantexid)
+        {
+            return _consultaPrueba.Alumnosxid(estudiantexid);
+        }
     }
 }

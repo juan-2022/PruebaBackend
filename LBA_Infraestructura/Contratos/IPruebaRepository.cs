@@ -9,6 +9,13 @@ namespace LBA_Infraestructura.Contratos
         Task<string> ConteoVehiculos(InformacionDto informacionDto);
         Task<string> RecaudoVehiculos(InformacionDto informacionDto);
         Task<string> RegistrarLibros(ComandoRegistroViewModel comandoRegistroViewModel);
+        Task<string> IniciarSesion(ConsultausuariosDto consultausuariosDto);
+
+        Task<string> CursosAlumno(InformacionCursoDto informacionCursoDto);
+
+        Task<string> AlumnosxNombre(InformacionEstudiante informacionEstudiante);
+
+        Task<string> Alumnosxid(Estudiantexid estudiantexid);
 
     }
 }

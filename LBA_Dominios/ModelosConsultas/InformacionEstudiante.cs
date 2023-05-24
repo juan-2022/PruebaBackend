@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace LBA_Dominios.ModelosConsultas
 {
-    public class ConsultausuariosDto
+    public class InformacionEstudiante
     {
-        public string usuario { get; set; }
-        public string password { get; set; }
+        public string nombreEstudiante { get; set; }
     }
 }

@@ -16,6 +16,28 @@ namespace LBA_Negocio.Biblioteca
             string resultado = await _PruebaRepository.ObtenerToken();         
             return resultado;
         }
+        public async Task<string> IniciarSesion(ConsultausuariosDto consultausuariosDto)
+        {
+            string resultado = await _PruebaRepository.IniciarSesion(consultausuariosDto);         
+            return resultado;
+        }
+        
+        public async Task<string> CursosAlumno(InformacionCursoDto informacionCursoDto)
+        {
+            string resultado = await _PruebaRepository.CursosAlumno(informacionCursoDto);         
+            return resultado;
+        }
+        
+        public async Task<string> AlumnosxNombre(InformacionEstudiante informacionEstudiante)
+        {
+            string resultado = await _PruebaRepository.AlumnosxNombre(informacionEstudiante);         
+            return resultado;
+        }
+        public async Task<string> Alumnosxid(Estudiantexid estudiantexid)
+        {
+            string resultado = await _PruebaRepository.Alumnosxid(estudiantexid);         
+            return resultado;
+        }
        
 
 

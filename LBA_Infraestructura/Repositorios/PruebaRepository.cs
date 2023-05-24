@@ -48,6 +48,36 @@ namespace LBA_Infraestructura.Repositorios
             var resultado = await EjecutarFuncion(_comandogeneral, "insertar_datos");
             return resultado;
         }
+        public async Task<string> IniciarSesion(ConsultausuariosDto consultausuariosDto)
+        {
+            _comandogeneral.Parameters.Clear();
+            _comandogeneral.Parameters.AddWithValue("@user", SqlDbType.VarChar).Value = consultausuariosDto.usuario;
+            _comandogeneral.Parameters.AddWithValue("@password", SqlDbType.VarChar).Value = consultausuariosDto.password;
+            var resultado = await EjecutarFuncion(_comandogeneral, "inicioSesion");
+            return resultado;
+        }
+        public async Task<string> CursosAlumno(InformacionCursoDto informacionCursoDto)
+        {
+            _comandogeneral.Parameters.Clear();
+            _comandogeneral.Parameters.AddWithValue("@AlumnoId",SqlDbType.VarChar).Value = informacionCursoDto.Id;
+            var resultado = await EjecutarFuncion(_comandogeneral, "ObtenerMateriasPorAlumno");
+            return resultado;
+
+        }
+        public async Task<string> AlumnosxNombre(InformacionEstudiante informacionEstudiante)
+        {
+            _comandogeneral.Parameters.Clear();
+            _comandogeneral.Parameters.AddWithValue("@NombreEstudiante", SqlDbType.VarChar).Value = informacionEstudiante.nombreEstudiante;
+            var resultado = await EjecutarFuncion(_comandogeneral, "ObtenerEstudiantesPorNombre");
+            return resultado;
+        }
+        public async Task<string> Alumnosxid(Estudiantexid estudiantexid)
+        {
+            _comandogeneral.Parameters.Clear();
+            _comandogeneral.Parameters.AddWithValue("@Id", SqlDbType.VarChar).Value = estudiantexid.id;
+            var resultado = await EjecutarFuncion(_comandogeneral, "ObtenerAlumnoPorId");
+            return resultado;
+        }
 
     }
 }
